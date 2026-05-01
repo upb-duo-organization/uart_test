@@ -4,16 +4,3 @@ sudo docker run -it --rm \
     --device /dev/video0:/dev/video0 \
     --device /dev/ttyTHS1:/dev/ttyTHS1 \
     dustynv/ros:foxy-ros-base-l4t-r32.7.1
-
-
-# 1. Update and install necessary tools
-apt-get update && apt-get install -y curl gnupg2 lsb-release
-
-# 2. Add the ROS2 GPG key
-curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | apt-key add -
-
-# 3. Add the repository to your sources list
-sh -c 'echo "deb [arch=$(dpkg --print-architecture)] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros2-latest.list'
-
-# 4. Update the list again
-apt-get update
