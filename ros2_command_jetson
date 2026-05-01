@@ -1,0 +1,6 @@
+sudo docker run -it --rm \
+    --runtime nvidia \
+    --network host \
+    --device /dev/video0:/dev/video0 \
+    --device /dev/ttyTHS1:/dev/ttyTHS1 \
+    dustynv/ros:foxy-ros-base-l4t-r32.7.1
