@@ -3,4 +3,5 @@ sudo docker run -it --rm \
     --network host \
     --device /dev/video0:/dev/video0 \
     --device /dev/ttyTHS1:/dev/ttyTHS1 \
+    -v ~/my_ros_projects:/ros_workspace \
     dustynv/ros:foxy-ros-base-l4t-r32.7.1
